@@ -2,31 +2,45 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Carolina M.",
-    role: "Paciente - Resistencia a la insulina",
+    name: "Felipe Inostroza Ríos",
+    role: "Paciente",
     content:
-      "Bárbara me ayudó a entender mi cuerpo de una manera que nunca antes lo había hecho. Por primera vez siento que estoy comiendo bien sin pasar hambre ni sentirme restringida.",
+      "La verdad ha sido mi primera experiencia frente a un nutricionista y se ha pasado, muy detallista, explicando todo muy bien hasta que toda la información quede clara. Muy pero muy personalizado. Se ha tomado el tiempo adecuado para una entrevista, educar y enseñar hábitos alimenticios y todo lo que conlleva este cambio. Volvería? sí claro, y la recomiendo al 100%.",
     rating: 5,
   },
   {
-    name: "Roberto P.",
-    role: "Paciente - Control de peso",
+    name: "Leslie",
+    role: "Paciente",
     content:
-      "Después de años probando dietas, encontré en Bárbara un enfoque diferente. Me enseñó a comer de verdad, no a seguir reglas imposibles. He bajado 12 kilos y los mantengo.",
+      "Fui a mi consulta y fue una excelente experiencia. La Nutri Bárbara, se dedica a enseñar como debemos nutrir nuestro cuerpo y si es necesario solicita exámenes. Además, su consulta es extensa ya que explica todo con detalles para que aprendas a cuidar tu cuerpo con alimentos acorde a nuestro organismo. Su informe nutricional es muy completo y con su plan de alimentación jamas pasarás hambre. Recomiendo 1.000%, es una excelente profesional, carismática, empática y preocupada de tus avances.",
     rating: 5,
   },
   {
-    name: "Patricia S.",
-    role: "Paciente - Diabetes tipo 2",
+    name: "Javiera",
+    role: "Paciente",
     content:
-      "Mi médico está impresionado con mis niveles de glucosa. La educación que me dio Bárbara sobre alimentación ha sido clave. Ahora sé qué comer y por qué.",
+      "Me has ayudado muchísimo a cambiar mis hábitos 💚 y a entender que esto no es solo una dieta, sino un estilo de vida 🥗. Gracias por tu dedicación, por enseñar con paciencia y por ayudarme a tener una mejor relación con la comida 🍽️ a entender que esto se trata de equilibrio. Eres una gran profesional 🙌",
     rating: 5,
   },
   {
-    name: "Fernando L.",
-    role: "Paciente - Dislipidemia",
+    name: "David",
+    role: "Paciente",
     content:
-      "Excelente profesional. Muy cercana, explica todo con claridad y sus planes son realistas. Mi colesterol bajó significativamente en 3 meses.",
+      "Me ayudó a cambiar mis hábitos enseñando a alimentarme bien, y ya estoy viendo resultados de forma sana. Se nota que sabe mucho, pero además es super cercana y preocupada. La recomiendo 100%, sobre todo si estás recién empezando como yo.",
+    rating: 5,
+  },
+  {
+    name: "Sergio",
+    role: "Paciente",
+    content:
+      "La señorita Bárbara como nutricionista no solo te guía en tu propósito, sino que también te educa y ayuda en la creación de hábitos alimenticios saludables. Siempre está atenta a las consultas que uno requiere y su forma de explicar es fácil de entender. Se preocupa igual de que uno esté avanzando, anímicamente te acompaña en el proceso. Al primer mes de control ya existen mejoras físicas y alimenticias. La verdad la experiencia ha sido 10/10.",
+    rating: 5,
+  },
+  {
+    name: "Angela Campos",
+    role: "Paciente",
+    content:
+      "Excelente profesional y buenísima experiencia, Bárbara me explicó de una manera sencilla y clara, preocupándose de que entendiera bien como alimentarme. Me hizo un plan detallado y personalizado que realmente me sirve en mi día a día, realista e interiorizándose en lo que podría realizar incluyendo mis actividades laborales y como hacerlos coincidir con mi rutina. ¡Gran profesional y persona, recomiendo totalmente!",
     rating: 5,
   },
 ];
@@ -54,17 +68,14 @@ const TestimonialsSection = () => {
               className="card-elevated p-6 md:p-8 hover:shadow-elevated transition-all duration-300 animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Quote Icon */}
               <div className="mb-4">
                 <Quote className="w-8 h-8 text-accent/40" />
               </div>
 
-              {/* Content */}
               <p className="text-muted-foreground leading-relaxed mb-6">
                 "{testimonial.content}"
               </p>
 
-              {/* Footer */}
               <div className="flex items-center justify-between pt-4 border-t border-border/50">
                 <div>
                   <h4 className="font-semibold text-foreground">
@@ -75,7 +86,6 @@ const TestimonialsSection = () => {
                   </p>
                 </div>
 
-                {/* Rating */}
                 <div className="flex gap-1">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star

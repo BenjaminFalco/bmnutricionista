@@ -1,6 +1,5 @@
 import { GraduationCap, Award, Heart } from "lucide-react";
-import barbaraPortrait from "../../assets/barbara-portrait.jpg";
-
+import barbaraPortrait from "../../assets/hero-barbara.jpg";
 const credentials = [
   {
     icon: GraduationCap,
