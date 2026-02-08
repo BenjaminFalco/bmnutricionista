@@ -35,9 +35,9 @@ const Footer = () => {
             <h4 className="font-serif font-semibold text-lg">Contacto</h4>
             <div className="flex flex-col gap-3 text-sm text-primary-foreground/80">
               <a
-                href="https://wa.me/56912345678"
+                href="https://api.whatsapp.com/send/?phone=56965493119&text&type=phone_number&app_absent=0"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
                 className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
               >
                 <Phone className="w-4 h-4" />
