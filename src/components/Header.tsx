@@ -25,7 +25,7 @@ const Header = () => {
 
   const handleWhatsAppClick = () => {
     window.open(
-      "https://wa.me/56912345678?text=Hola%20Bárbara,%20me%20gustaría%20agendar%20una%20consulta%20nutricional",
+      "https://api.whatsapp.com/send/?phone=56965493119&text&type=phone_number&app_absent=0",
       "_blank"
     );
   };
