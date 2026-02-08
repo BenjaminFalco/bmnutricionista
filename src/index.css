@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bárbara Mercado Nutricionista - Design System
+   Colores basados en el logo oficial: verdes naturales
+   Estética: clínica moderna + cercanía humana
+*/
+
+@layer base {
+  :root {
+    /* Verde oscuro del logo - color primario de marca */
+    --primary: 152 68% 24%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Verde claro/lima del logo - acentos */
+    --accent: 88 52% 48%;
+    --accent-foreground: 152 68% 14%;
+
+    /* Fondos neutros cálidos */
+    --background: 120 20% 99%;
+    --foreground: 152 20% 15%;
+
+    /* Cards y superficies */
+    --card: 0 0% 100%;
+    --card-foreground: 152 20% 15%;
+
+    /* Superficies secundarias */
+    --secondary: 120 25% 96%;
+    --secondary-foreground: 152 40% 20%;
+
+    /* Elementos sutiles */
+    --muted: 120 15% 94%;
+    --muted-foreground: 152 10% 45%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 152 20% 15%;
+
+    /* Destructivo */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Bordes e inputs */
+    --border: 152 20% 88%;
+    --input: 152 20% 88%;
+    --ring: 152 68% 24%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 120 20% 98%;
+    --sidebar-foreground: 152 20% 25%;
+    --sidebar-primary: 152 68% 24%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 25% 94%;
+    --sidebar-accent-foreground: 152 68% 20%;
+    --sidebar-border: 152 15% 90%;
+    --sidebar-ring: 152 68% 24%;
+
+    /* Custom tokens para la marca */
+    --brand-green-dark: 152 68% 24%;
+    --brand-green-light: 88 52% 48%;
+    --brand-cream: 45 30% 97%;
+    --brand-sage: 140 25% 90%;
+
+    /* Gradientes */
+    --gradient-hero: linear-gradient(135deg, hsl(120 20% 99%) 0%, hsl(140 25% 95%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(120 25% 98%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(152 68% 24%) 0%, hsl(152 55% 32%) 100%);
+
+    /* Sombras elegantes */
+    --shadow-soft: 0 4px 20px -4px hsl(152 30% 30% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(152 30% 30% / 0.12);
+    --shadow-elevated: 0 20px 50px -15px hsl(152 30% 30% / 0.15);
+  }
+
+  .dark {
+    --primary: 88 52% 55%;
+    --primary-foreground: 152 68% 10%;
+    --accent: 152 50% 35%;
+    --accent-foreground: 0 0% 98%;
+    --background: 152 25% 8%;
+    --foreground: 120 20% 95%;
+    --card: 152 25% 10%;
+    --card-foreground: 120 20% 95%;
+    --secondary: 152 20% 15%;
+    --secondary-foreground: 120 20% 90%;
+    --muted: 152 15% 18%;
+    --muted-foreground: 120 15% 65%;
+    --popover: 152 25% 10%;
+    --popover-foreground: 120 20% 95%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 152 15% 20%;
+    --input: 152 15% 20%;
+    --ring: 88 52% 55%;
+    --sidebar-background: 152 25% 8%;
+    --sidebar-foreground: 120 15% 90%;
+    --sidebar-primary: 88 52% 55%;
+    --sidebar-primary-foreground: 152 68% 10%;
+    --sidebar-accent: 152 20% 15%;
+    --sidebar-accent-foreground: 120 20% 90%;
+    --sidebar-border: 152 15% 20%;
+    --sidebar-ring: 88 52% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-16 md:px-6 md:py-24 lg:px-8 lg:py-32;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  .card-elevated {
+    @apply bg-card rounded-2xl shadow-[var(--shadow-card)] border border-border/50;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20BD5A] text-white font-medium px-6 py-3.5 rounded-full transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
